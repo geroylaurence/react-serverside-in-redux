@@ -1,0 +1,11 @@
+{
+  "plugins": [
+    "universal-import",
+    ["babel-plugin-styled-components", { "displayName": false, "ssr": true }]
+  ],
+  "presets": [
+    "env",
+    "react",
+    "stage-2"
+  ]
+}
