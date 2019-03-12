@@ -14,6 +14,7 @@ import App from '../client/app';
 import appReducers from '../redux/reducers';
 import theme from '../client/ui/styles/theme';
 
+const config = require('config');
 const normalizeCSS = require('normalize.css/normalize.css').toString();
 
 function sendResponse(res, reduxStore, history, clientStats) {
@@ -75,7 +76,7 @@ function sendResponse(res, reduxStore, history, clientStats) {
       <html>
         <head>
           <meta charset="utf-8">
-          <title>TourHeart</title>
+          <title>${config.get("app")['web-title']}</title>
           <style>
           ${normalizeCSS}
 
